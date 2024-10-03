@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "timeops-chrono",
+    "timeops-hifitime",
+    "timeops-jiff",
+    "timeops-time",
+]
+resolver = "2"
