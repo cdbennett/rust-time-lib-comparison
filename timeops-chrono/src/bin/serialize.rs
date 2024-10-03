@@ -46,6 +46,9 @@ fn main() {
   "civil_dt": "2024-11-03T01:30:00"
 }"#;
     let deserialized: MyData = serde_json::from_str(&given_json).unwrap();
-    assert_eq!(deserialized.offset_dt.to_string(), "2024-10-03 17:36:05.910 -07:00");
+    assert_eq!(
+        deserialized.offset_dt.to_string(),
+        "2024-10-03 17:36:05.910 -07:00"
+    );
     assert_eq!(deserialized.civil_dt.to_string(), "2024-11-03T01:30:00");
 }
