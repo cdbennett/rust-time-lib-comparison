@@ -12,7 +12,7 @@ fn main() {
     for line in stdin().lines() {
         let line = line.expect("read input line");
         let line = line.trim();
-        let t: Epoch = ISO8601.parse(&line).expect(&format!("parse time '{line}'"));
+        let t: Epoch = ISO8601.parse(line).unwrap_or_else(|_| panic!("parse time '{line}'"));
         println!("Parsed time: {t:?}");
     }
 }

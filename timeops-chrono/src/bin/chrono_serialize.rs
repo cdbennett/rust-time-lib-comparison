@@ -20,7 +20,7 @@ fn main() {
     let offset_dt = DateTime::parse_from_rfc3339("2024-10-03T17:36:05.910625056Z").unwrap();
     //let local_now: DateTime<Local> = Local::now();
     let civil_dt = NaiveDateTime::new(
-        NaiveDate::from_ymd_opt(2024, 11, 03).unwrap(),
+        NaiveDate::from_ymd_opt(2024, 11, 3).unwrap(),
         NaiveTime::from_hms_opt(1, 30, 0).unwrap(),
     );
     let data = MyData {
@@ -45,7 +45,7 @@ fn main() {
   "offset_dt": "2024-10-03T17:36:05.910-0700",
   "civil_dt": "2024-11-03T01:30:00"
 }"#;
-    let deserialized: MyData = serde_json::from_str(&given_json).unwrap();
+    let deserialized: MyData = serde_json::from_str(given_json).unwrap();
     assert_eq!(
         deserialized.offset_dt.to_string(),
         "2024-10-03 17:36:05.910 -07:00"

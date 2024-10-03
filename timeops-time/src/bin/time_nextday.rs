@@ -10,8 +10,8 @@ fn main() {
     // Given the time is 00:15 on 3 November, just hours before the DST change.
     // Note that the start of the local day is 04:00 UTC. But the start of tomorrow is 05:00 UTC (the 3rd is a 25-hour day).
     let now = OffsetDateTime::new_in_offset(
-        Date::from_calendar_date(2024, time::Month::November, 03).unwrap(),
-        Time::from_hms(0, 15, 00).unwrap(),
+        Date::from_calendar_date(2024, time::Month::November, 3).unwrap(),
+        Time::from_hms(0, 15, 0).unwrap(),
         UtcOffset::from_hms(-4, 0, 0).unwrap(),
     );
     // Extract the civil (time zone-naive) date.
